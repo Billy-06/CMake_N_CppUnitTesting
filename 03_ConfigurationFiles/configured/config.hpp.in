@@ -1,0 +1,20 @@
+#pragma once
+
+#include <cstdint>
+#include <string_view>
+
+static constexpr std::string_view project_name = "@PROJECT_NAME@";
+static constexpr std::string_view project_version = "@PROJECT_VERSION@";
+
+
+// >    Major: With versioning, a different major version number indicates
+// significant breaking changes in the code to the extent that if
+// a user were to compile the code on the previous version, it wouldn't work
+// >    Minor: This indicates that th new version contains some new features
+// but previous versions compile just fine
+// >    Patch: This shows that there are no new features in the new version
+// and the previous versions would compile just fine, but there has been bug
+// fixes to the new version
+static constexpr std::int32_t project_version_major{@PROJECT_VERSION_MAJOR@};
+static constexpr std::int32_t project_version_minor{@PROJECT_VERSION_MINOR@};
+static constexpr std::int32_t project_version_patch{@PROJECT_VERSION_PATCH@};

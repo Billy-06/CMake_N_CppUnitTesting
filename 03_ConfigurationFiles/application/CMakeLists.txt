@@ -1,5 +1,10 @@
+set(
+    EXE_SOURCES
+    Main.cc
+)
+
 # cmake --build . --target Executable
-add_executable(${EXECUTABLE_NAME} Main.cc)
+add_executable(${EXECUTABLE_NAME} ${EXE_SOURCES})
 
 
 # Link the library object files with the executable

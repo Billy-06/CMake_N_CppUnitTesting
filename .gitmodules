@@ -1,0 +1,3 @@
+[submodule "04_ExternalGit/dependencies/json"]
+	path = 04_ExternalGit/dependencies/json
+	url = https://github.com/nlohmann/json

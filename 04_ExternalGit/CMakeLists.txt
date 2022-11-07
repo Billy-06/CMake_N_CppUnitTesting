@@ -15,6 +15,7 @@ set(CMAKE_CXX_STANDARD          17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS        OFF)
 
+option(ENABLE_TESTING "Whether to enable the unit testing build" ON)
 
 # set the cmake module path
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
@@ -23,6 +24,7 @@ include(AddGitSubmodule)
 
 # fetch content is used for just cmake project
 include(FetchContent)
+include(Docs)
 
 add_git_submodule(dependencies/json)
 
@@ -74,4 +76,6 @@ if (COMPILE_EXECUTABLE)
 else()
     message("Compiling Without Executbale")
 endif()
+
+add_subdirectory(tests)
 

@@ -6,6 +6,47 @@ jobs:
         runs-on: windows-latest
         steps:
             - uses: actions/checkout@v2
-            - name: Say Hello
+            - name: Testing_00_Starter
+              run: |
+                  echo "Hello World"
+                  cd ${{ github.workspace }}/00_Starter
+                  mkdir ${{ github.workspace }}/00_Starter/Build
+                  cd ${{ github.workspace }}/00_Starter/Build
+                  cmake -G "Visual Studio 16 2019" -A x64 ..
+                  cmake --build . --config Release
+              shell: powershell
+            - name: Testing_01_ProjectStructure
               run: echo "Hello World"
+                  cd ${{ github.workspace }}/01_ProjectStructure
+                  mkdir ${{ github.workspace }}/01_ProjectStructure/Build
+                  cd ${{ github.workspace }}/01_ProjectStructure/Build
+                  cmake -G "Visual Studio 16 2019" -A x64 ..
+                  cmake --build . --config Release
+              shell: powershell
+            - name: Testing_02_ProjectStructure_Intermediate
+              run: |
+                  echo "Hello World"
+                  cd ${{ github.workspace }}/02_ProjectStructure_Intermediate
+                  mkdir ${{ github.workspace }}/02_ProjectStructure_Intermediate/Build
+                  cd ${{ github.workspace }}/02_ProjectStructure_Intermediate/Build
+                  cmake -G "Visual Studio 16 2019" -A x64 ..
+                  cmake --build . --config Release
+              shell: powershell
+            - name: Testing_03_ConfigurationFiles
+              run: |
+                  echo "Hello World"
+                  cd ${{ github.workspace }}/03_ConfigurationFiles
+                  mkdir ${{ github.workspace }}/03_ConfigurationFiles/Build
+                  cd ${{ github.workspace }}/03_ConfigurationFiles/Build
+                  cmake -G "Visual Studio 16 2019" -A x64 ..
+                  cmake --build . --config Release
+              shell: powershell
+            - name: Testing_04_ExternalGit
+              run: |
+                  echo "Hello World"
+                  cd ${{ github.workspace }}/04_ExternalGit
+                  mkdir ${{ github.workspace }}/04_ExternalGit/Build
+                  cd ${{ github.workspace }}/04_ExternalGit/Build
+                  cmake -G "Visual Studio 16 2019" -A x64 ..
+                  cmake --build . --config Release
               shell: powershell

@@ -1,0 +1,14 @@
+# test is the build builds successfully
+# test is the build runs successfully
+# test is the build runs successfully with the right arguments
+name: Test_Successful_Build
+run-name: ${{ github.actor }} of id ${{ github.actor_id }} is testing the CXX build
+on: [push, pull_request]
+jobs:
+    testing_build:
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Say Hello
+              run: echo "Hello World"
+              shell: powershell
